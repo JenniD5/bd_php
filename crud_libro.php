@@ -15,10 +15,26 @@
             $insert->bindValue('Edicion', $libro->getEdicion());
             $insert->execute();
         }
+
+        function mostrar(){
+			$db=Bd::conectar();
+			$listaLibros=[];
+			$select=$db->query('SELECT * FROM libro');
+
+			foreach($select->fetchAll() as $libro){
+				$myLibro= new Libro();
+				$myLibro->setId($libro['id']);
+				$myLibro->setNombre($libro['Nombre']);
+				$myLibro->setAutor($libro['Autor']);
+				$myLibro->setEdicion($libro['Edicion']);
+				$listaLibros[]=$myLibro;
+			}
+			return $listaLibros;
+		}
+    }        
+    
+      
         
     
-            
-        
-    }
 
 ?>

@@ -3,9 +3,9 @@
 <title>INGRESAR LIBROS</title>
 </head>
 
-<body>
-<header>Ingresar los datos del libro</header>
-    <form action="administrar_libro.php" method="post"> 
+<body  background="fondo.jpg", style="font-family: Arial; margin:170px; margin-left: 590px;">
+<header><h2>Ingresar los datos del libro</h2></header>
+    <form action="administrar_libro.php" method="post" style="margin-top:100px;"> 
         <table>
             <tr>
                 <td>Nombre Libro</td>
